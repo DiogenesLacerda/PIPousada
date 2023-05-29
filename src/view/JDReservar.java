@@ -624,7 +624,7 @@ public class JDReservar extends javax.swing.JDialog {
                     jFormattedTextFieldDataSaida.getText().charAt(4)+jFormattedTextFieldDataSaida.getText().charAt(2)+jFormattedTextFieldDataSaida.getText().charAt(0)+
                     jFormattedTextFieldDataSaida.getText().charAt(1));
        
-            if(repReserva.periodoreservado(dten, dtsa, id) > 1){
+            if(repReserva.periodoreservado(dten, dtsa, id) != 0){
                 JOptionPane.showMessageDialog(null, "Quarto já reservado nesse período");
             }else{          
               try {

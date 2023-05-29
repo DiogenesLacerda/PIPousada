@@ -534,10 +534,9 @@ public class RepReserva{
         con = ConexaoMySql.getConexao();
         int ret = 0;
 
-        String sql = "select count(*) as total from reserva r, quarto q where "
-                + "q.id = r.quarto_id and r.status = 'Reservada' and "
-                + "(r.data_entrada <= '"+dte+"' and r.data_saida >= '"+dte+"') "
-                + "or (r.data_entrada <= '"+dts+"' and r.data_saida >= '"+dts+"') and q.id = '"+id+"'";
+        String sql = "select count(*) as total from reserva where status = 'Reservada' "
+                + "and quarto_id = '"+id+"' and ((data_entrada <= '"+dte+"' and data_saida >= '"+dte+"') "
+                + "or (data_entrada <= '"+dts+"' and data_saida >= '"+dts+"') or (data_entrada >= '"+dte+"' and data_saida <= '"+dts+"'))";
         try {
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
