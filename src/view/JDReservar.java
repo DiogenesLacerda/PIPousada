@@ -602,6 +602,7 @@ public class JDReservar extends javax.swing.JDialog {
             jLabelQuarto.setText(jTableLista.getValueAt(jTableLista.getSelectedRow(), 0).toString());
             jLabelValor.setText(jTableLista.getValueAt(jTableLista.getSelectedRow(), 1).toString());
             qcod = Integer.parseInt(jTableLista.getValueAt(jTableLista.getSelectedRow(), 2).toString());
+            jFormattedTextFieldDataEntrada.requestFocus();        
         }
     }//GEN-LAST:event_jTableListaMouseClicked
 
@@ -612,7 +613,21 @@ public class JDReservar extends javax.swing.JDialog {
         } else if (jLabelQuarto.getText().equals("")) {
             JOptionPane.showMessageDialog(null, "Escolha o quarto");
         } else {
-            try {
+            int id = qcod;
+            String dten, dtsa;
+            dten = (""+jFormattedTextFieldDataEntrada.getText().charAt(6)+jFormattedTextFieldDataEntrada.getText().charAt(7)+jFormattedTextFieldDataEntrada.getText().charAt(8)+
+                    jFormattedTextFieldDataEntrada.getText().charAt(9)+jFormattedTextFieldDataEntrada.getText().charAt(5)+jFormattedTextFieldDataEntrada.getText().charAt(3)+
+                    jFormattedTextFieldDataEntrada.getText().charAt(4)+jFormattedTextFieldDataEntrada.getText().charAt(2)+jFormattedTextFieldDataEntrada.getText().charAt(0)+
+                    jFormattedTextFieldDataEntrada.getText().charAt(1));
+            dtsa = (""+jFormattedTextFieldDataSaida.getText().charAt(6)+jFormattedTextFieldDataSaida.getText().charAt(7)+jFormattedTextFieldDataSaida.getText().charAt(8)+
+                    jFormattedTextFieldDataSaida.getText().charAt(9)+jFormattedTextFieldDataSaida.getText().charAt(5)+jFormattedTextFieldDataSaida.getText().charAt(3)+
+                    jFormattedTextFieldDataSaida.getText().charAt(4)+jFormattedTextFieldDataSaida.getText().charAt(2)+jFormattedTextFieldDataSaida.getText().charAt(0)+
+                    jFormattedTextFieldDataSaida.getText().charAt(1));
+       
+            if(repReserva.periodoreservado(dten, dtsa, id) > 1){
+                JOptionPane.showMessageDialog(null, "Quarto já reservado nesse período");
+            }else{          
+              try {
                 ini = util.tolocaldate(jFormattedTextFieldDataEntrada.getText());
                 fim = util.tolocaldate(jFormattedTextFieldDataSaida.getText());
                 Duration dias = Duration.between(ini, fim);            
@@ -624,7 +639,7 @@ public class JDReservar extends javax.swing.JDialog {
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(null, "Digite datas válidas");
             }        
-        
+            }
         }
         
 

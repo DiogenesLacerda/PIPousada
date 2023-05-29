@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import model.Reserva;
@@ -511,6 +512,32 @@ public class RepReserva{
         String sql = "select count(*) as total from reserva where status = 'Reservada' "
                 + "and data_saida = current_date order by id desc";
 
+        try {
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+
+            while (rs.next()) {
+                ret = rs.getInt("total");
+            }
+        } catch (SQLException ex) {
+            return ret;
+        }
+
+        ConexaoMySql.fecharConexao();
+
+        return ret;
+    }
+  
+  
+  public int periodoreservado(String dte, String dts, int id) {
+
+        con = ConexaoMySql.getConexao();
+        int ret = 0;
+
+        String sql = "select count(*) as total from reserva r, quarto q where "
+                + "q.id = r.quarto_id and r.status = 'Reservada' and "
+                + "(r.data_entrada <= '"+dte+"' and r.data_saida >= '"+dte+"') "
+                + "or (r.data_entrada <= '"+dts+"' and r.data_saida >= '"+dts+"') and q.id = '"+id+"'";
         try {
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(sql);
