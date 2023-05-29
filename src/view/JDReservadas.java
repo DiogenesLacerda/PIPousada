@@ -354,17 +354,14 @@ public class JDReservadas extends javax.swing.JDialog {
 
     private void jButtonCancelarReserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarReserActionPerformed
         if(!jLabelReserva.getText().equals("")){
-           if(repReserva.cancelar(Integer.parseInt(jLabelReserva.getText()))){
               if(JOptionPane.showConfirmDialog(null, "Confirma cancelar a reserva "+jLabelReserva.getText()+" ?") == JOptionPane.YES_OPTION){
+              repReserva.cancelar(Integer.parseInt(jLabelReserva.getText()));
                JOptionPane.showMessageDialog(null, "Reserva canelada");
                limparCampos();
                habilitarCampos(false);
                reservas = repReserva.reservasreservadas();
                preencherJTable(reservas);
               }
-           }else{
-               JOptionPane.showMessageDialog(null, "Erro ao cancelar reserva");
-           }
         }else{
              JOptionPane.showMessageDialog(null, "Selecione a reserva a ser cancelada");
         }

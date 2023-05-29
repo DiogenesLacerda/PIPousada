@@ -124,8 +124,7 @@ public class RepQuarto{
       con = ConexaoMySql.getConexao();
       List<Quarto> quartos = new ArrayList<>();
       
-      String sql = "select distinct q.* from quarto q, reserva r where "
-              + "q.id = r.quarto_id and r.status != 'Reservada' and q.reservado = 0 and q.status = 1";
+      String sql = "select distinct * from quarto where reservado = 0 and status = 1";
               
       
       try{

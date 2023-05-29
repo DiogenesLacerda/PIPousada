@@ -28,8 +28,8 @@ public class JDQuartosDisponiveis extends javax.swing.JDialog {
         initComponents();
         repQuarto.atulaizarativo();
         repQuarto.atulaizardesativoauto();
-        quartos2 = repQuarto.disponiveis();
-        quartos = repQuarto.disponiveisreservados();
+        quartos = repQuarto.disponiveis();
+        quartos2 = repQuarto.disponiveisreservados();
         preencherJTable(quartos);
         preencherJTable2(quartos2);
         jTextFieldPesquisa.requestFocus();
@@ -167,7 +167,7 @@ public class JDQuartosDisponiveis extends javax.swing.JDialog {
 
         jLabel3.setText("COM RESERVAS FUTURAS");
 
-        jLabel4.setText("SEM RESERVAS");
+        jLabel4.setText("DISPONÍVEIS");
 
         jLabel2.setText("Descricao:");
 
@@ -186,34 +186,35 @@ public class JDQuartosDisponiveis extends javax.swing.JDialog {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane2)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(49, Short.MAX_VALUE)
+                .addComponent(jRadioButtonTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButtonNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jTextFieldPesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonLimpar)
+                .addGap(37, 37, 37))
             .addGroup(layout.createSequentialGroup()
                 .addGap(66, 66, 66)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addComponent(jScrollPane2)
-            .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(49, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jRadioButtonTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButtonNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(17, 17, 17)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextFieldPesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButtonLimpar)
-                        .addGap(37, 37, 37))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(356, 356, 356))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(388, 388, 388))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(349, 349, 349)
+                        .addComponent(jLabel3))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(379, 379, 379)
+                        .addComponent(jLabel4)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -226,20 +227,20 @@ public class JDQuartosDisponiveis extends javax.swing.JDialog {
                     .addComponent(jLabel1)
                     .addComponent(jButtonLimpar))
                 .addGap(29, 29, 29)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel4)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(34, 34, 34)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(44, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 301, Short.MAX_VALUE)
                         .addComponent(jLabel2)
                         .addGap(70, 70, 70))))
         );
@@ -251,11 +252,11 @@ public class JDQuartosDisponiveis extends javax.swing.JDialog {
     private void jTextFieldPesquisaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldPesquisaKeyPressed
            if(evt.getKeyCode() == KeyEvent.VK_ENTER){
             if(jRadioButtonTipo.isSelected()){
-            quartos = repQuarto.pesquisardisponiveisr(jTextFieldPesquisa.getText(), "tipo");
-            quartos2 = repQuarto.pesquisardisponiveis(jTextFieldPesquisa.getText(), "tipo");
+            quartos2 = repQuarto.pesquisardisponiveisr(jTextFieldPesquisa.getText(), "tipo");
+            quartos = repQuarto.pesquisardisponiveis(jTextFieldPesquisa.getText(), "tipo");
             }else{
-            quartos = repQuarto.pesquisardisponiveisr(jTextFieldPesquisa.getText(), "numero");
-            quartos2 = repQuarto.pesquisardisponiveis(jTextFieldPesquisa.getText(), "numero");
+            quartos2 = repQuarto.pesquisardisponiveisr(jTextFieldPesquisa.getText(), "numero");
+            quartos = repQuarto.pesquisardisponiveis(jTextFieldPesquisa.getText(), "numero");
             }
             
             preencherJTable(quartos);
@@ -266,8 +267,8 @@ public class JDQuartosDisponiveis extends javax.swing.JDialog {
     }//GEN-LAST:event_jTextFieldPesquisaKeyPressed
 
     private void jButtonLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimparActionPerformed
-        quartos2 = repQuarto.disponiveis();
-        quartos = repQuarto.disponiveisreservados();
+        quartos = repQuarto.disponiveis();
+        quartos2 = repQuarto.disponiveisreservados();
         preencherJTable(quartos);
         preencherJTable2(quartos2);
         jTextFieldPesquisa.setText("");

@@ -309,12 +309,12 @@ public class JDQuartos extends javax.swing.JDialog {
 
     private void jButtonExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExcluirActionPerformed
         if(!jTextFieldCodigo.getText().equals("")){
-             if(JOptionPane.showConfirmDialog(null, "Deseja excluir o cliente ("+jTextFieldNumero.getText()+")  ? ") == JOptionPane.YES_OPTION){
+             if(JOptionPane.showConfirmDialog(null, "Deseja excluir o quarto "+jTextFieldNumero.getText()+"  ? ") == JOptionPane.YES_OPTION){
             repQuarto.excluir(Integer.parseInt(jTextFieldCodigo.getText()));
             limparCampos();
              }
         }else{
-            JOptionPane.showMessageDialog(null, "Selecione o cliente a ser excluído");
+            JOptionPane.showMessageDialog(null, "Selecione o quarto a ser excluído");
         }
         quartos = repQuarto.retornar();
         preencherJTable(quartos);
