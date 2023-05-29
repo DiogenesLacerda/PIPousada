@@ -1,0 +1,150 @@
+
+package model;
+
+import java.time.LocalDateTime;
+import utils.Utils;
+
+public class Cliente {
+    
+    private int id;
+    private String nome;
+    private String cpf;
+    private String rg;
+    private String telefone;
+    private String sexo;
+    private LocalDateTime datanasci;
+    private int status;
+    
+    public Cliente(){
+    }
+
+    /**
+     * @return the id
+     */
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    /**
+     * @return the nome
+     */
+    public String getNome() {
+        return nome;
+    }
+
+    /**
+     * @param nome the nome to set
+     */
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    /**
+     * @return the cpf
+     */
+    public String getCpf() {
+        return cpf;
+    }
+
+    /**
+     * @param cpf the cpf to set
+     */
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    /**
+     * @return the rg
+     */
+    public String getRg() {
+        return rg;
+    }
+
+    /**
+     * @param rg the rg to set
+     */
+    public void setRg(String rg) {
+        this.rg = rg;
+    }
+
+    /**
+     * @return the telefone
+     */
+    public String getTelefone() {
+        return telefone;
+    }
+
+    /**
+     * @param telefone the telefone to set
+     */
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    /**
+     * @return the sexo
+     */
+    public String getSexo() {
+        return sexo;
+    }
+
+    /**
+     * @param sexo the sexo to set
+     */
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    /**
+     * @return the datanasci
+     */
+    public LocalDateTime getDatanasci() {
+        return datanasci;
+    }
+
+    /**
+     * @param datanasci the datanasci to set
+     */
+    public void setDatanasci(LocalDateTime datanasci) {
+        this.datanasci = datanasci;
+    }
+    
+     public String dataTostringsql(){
+        String data;
+        Utils date = new Utils(); 
+        
+        data = date.formatarDataHoraSQL(datanasci);
+        return data;
+    }
+    
+    public String dataTostring(){
+        String data;
+        Utils date = new Utils(); 
+        
+        data = date.formatarDataHora(datanasci);
+        return data;
+    }
+
+    /**
+     * @return the status
+     */
+    public int getStatus() {
+        return status;
+    }
+
+    /**
+     * @param status the status to set
+     */
+    public void setStatus(int status) {
+        this.status = status;
+    }
+    
+    
+}
