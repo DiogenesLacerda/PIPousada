@@ -244,7 +244,7 @@ public class JDReservar extends javax.swing.JDialog {
 
         jLabel1.setText("Reserva número:");
 
-        jLabel3.setText("Quartos disponíveis");
+        jLabel3.setText("Quartos ");
 
         jLabel13.setText("Total da reserva:");
 
@@ -409,7 +409,7 @@ public class JDReservar extends javax.swing.JDialog {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel3)
-                .addGap(122, 122, 122))
+                .addGap(134, 134, 134))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -541,7 +541,7 @@ public class JDReservar extends javax.swing.JDialog {
 
     private void jButtonNovaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNovaActionPerformed
         habilitarCampos(true);
-        quartos = repQuarto.disponiveisparareservar();
+        quartos = repQuarto.retornar();
         preencherJTable(quartos);
         pags = repFpag.retornar();
         preencherJTableFpag(pags);

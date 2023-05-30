@@ -177,7 +177,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
         jMenuQuartos.setText("Quartos");
 
-        jMenuItemDisponiveis.setText("Disponíveis");
+        jMenuItemDisponiveis.setText("Lista");
         jMenuItemDisponiveis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItemDisponiveisActionPerformed(evt);

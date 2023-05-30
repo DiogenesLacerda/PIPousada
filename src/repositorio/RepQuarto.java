@@ -119,12 +119,13 @@ public class RepQuarto{
       return quartos;
   }  
    
-   public List<Quarto> disponiveis(){
+   
+    public List<Quarto> ocupados(){
       
       con = ConexaoMySql.getConexao();
       List<Quarto> quartos = new ArrayList<>();
       
-      String sql = "select distinct * from quarto where reservado = 0 and status = 1";
+      String sql = "select distinct * from quarto where reservado = 1 and status = 1";
               
       
       try{
@@ -152,12 +153,13 @@ public class RepQuarto{
       return quartos;
   }
    
-     public List<Quarto> disponiveisparareservar(){
+   public List<Quarto> disponiveis(){
       
       con = ConexaoMySql.getConexao();
       List<Quarto> quartos = new ArrayList<>();
       
       String sql = "select distinct * from quarto where reservado = 0 and status = 1";
+              
       
       try{
           Statement stmt = con.createStatement();
