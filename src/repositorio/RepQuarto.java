@@ -236,13 +236,9 @@ public class RepQuarto{
       String sql = ""; 
       
        if(tipoPesquisa.equals("tipo")){
-       sql = "select distinct q.* from quarto q, reserva r where "
-              + "q.id = r.quarto_id and r.status != 'Reservada' and "
-               + "q.reservado = 0 and q.status = 1 and tipo like '%"+valor+"%'";
+       sql = "select distinct * from quarto where reservado = 0 and status = 1 and tipo like '%"+valor+"%'";
       }else if(tipoPesquisa.equals("numero")){
-       sql = "select distinct q.* from quarto q, reserva r where "
-              + "q.id = r.quarto_id and r.status != 'Reservada' and "
-               + "q.reservado = 0 and q.status = 1 and num_quarto = '"+valor+"'";
+       sql = "select distinct * from quarto where reservado = 0 and status = 1 and num_quarto = '"+valor+"'";
       }
       
       try{

@@ -4,8 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/dioge/Documents/NetBeansProjects/ProjetoPiPousada/src/view/JFramePrincipal.java</file>
+            <file>file:/C:/Users/dioge/Documents/NetBeansProjects/ProjetoPiPousada/src/view/JDQuartosDisponiveis.java</file>
             <file>file:/C:/Users/dioge/Documents/NetBeansProjects/ProjetoPiPousada/src/view/JDReservar.java</file>
             <file>file:/C:/Users/dioge/Documents/NetBeansProjects/ProjetoPiPousada/src/utils/Utils.java</file>
+            <file>file:/C:/Users/dioge/Documents/NetBeansProjects/ProjetoPiPousada/src/repositorio/RepQuarto.java</file>
         </group>
     </open-files>
 </project-private>
