@@ -124,19 +124,24 @@ public class JDQuartosDisponiveis extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         buttonGroup1.add(jRadioButtonTipo);
+        jRadioButtonTipo.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButtonTipo.setText("Tipo");
 
         buttonGroup1.add(jRadioButtonNumero);
+        jRadioButtonNumero.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButtonNumero.setText("Número");
 
+        jTextFieldPesquisa.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jTextFieldPesquisa.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jTextFieldPesquisaKeyPressed(evt);
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel1.setText("Pesquisar:");
 
+        jTableLista.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jTableLista.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -163,6 +168,7 @@ public class JDQuartosDisponiveis extends javax.swing.JDialog {
         });
         jScrollPane2.setViewportView(jTableLista);
 
+        jTableLista1.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jTableLista1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -189,12 +195,16 @@ public class JDQuartosDisponiveis extends javax.swing.JDialog {
         });
         jScrollPane3.setViewportView(jTableLista1);
 
+        jLabel3.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel3.setText("COM RESERVAS FUTURAS");
 
+        jLabel4.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel4.setText("DISPONÍVEIS");
 
-        jLabel2.setText("Descricao:");
+        jLabel2.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        jLabel2.setText("Descrição:");
 
+        jButtonLimpar.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jButtonLimpar.setText("LIMPAR");
         jButtonLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -206,6 +216,7 @@ public class JDQuartosDisponiveis extends javax.swing.JDialog {
         jTextAreaDescricao.setRows(5);
         jScrollPane1.setViewportView(jTextAreaDescricao);
 
+        jTableLista2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jTableLista2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -232,6 +243,7 @@ public class JDQuartosDisponiveis extends javax.swing.JDialog {
         });
         jScrollPane4.setViewportView(jTableLista2);
 
+        jLabel5.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel5.setText("QUARTOS OCUPADOS ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -241,15 +253,15 @@ public class JDQuartosDisponiveis extends javax.swing.JDialog {
             .addComponent(jScrollPane2)
             .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(49, Short.MAX_VALUE)
+                .addContainerGap(34, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jRadioButtonTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jRadioButtonNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(17, 17, 17)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addComponent(jLabel1)
+                        .addGap(11, 11, 11)
                         .addComponent(jTextFieldPesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButtonLimpar)
@@ -299,7 +311,7 @@ public class JDQuartosDisponiveis extends javax.swing.JDialog {
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -347,6 +359,7 @@ public class JDQuartosDisponiveis extends javax.swing.JDialog {
         if(jTableLista.getSelectedRow() != - 1){
             jTextAreaDescricao.setText(jTableLista.getValueAt(jTableLista.getSelectedRow(), 2).toString());
         }
+        jTableLista1.setUpdateSelectionOnSort(false);
 // TODO add your handling code here:
     }//GEN-LAST:event_jTableListaMouseClicked
 
@@ -358,7 +371,9 @@ public class JDQuartosDisponiveis extends javax.swing.JDialog {
     }//GEN-LAST:event_jTableLista1MouseClicked
 
     private void jTableLista2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableLista2MouseClicked
-        // TODO add your handling code here:
+        if(jTableLista2.getSelectedRow() != - 1){
+            jTextAreaDescricao.setText(jTableLista2.getValueAt(jTableLista2.getSelectedRow(), 2).toString());
+        }
     }//GEN-LAST:event_jTableLista2MouseClicked
 
     /**

@@ -64,6 +64,7 @@ public class JDReservasFinalizamHoje extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        jTableLista.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTableLista.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -72,7 +73,7 @@ public class JDReservasFinalizamHoje extends javax.swing.JDialog {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "Nº", "ENTRADA", "CLIENTE", "QUARTO", "COD Q.", "OBS:"
+                "Nº:", "ENTRADA:", "CLIENTE:", "QUARTO:", "COD Q.:", "OBS:"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -90,6 +91,7 @@ public class JDReservasFinalizamHoje extends javax.swing.JDialog {
         });
         jScrollPane2.setViewportView(jTableLista);
 
+        jButtonFinalizar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButtonFinalizar.setText("FINALIZAR RESERVA");
         jButtonFinalizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,7 +99,10 @@ public class JDReservasFinalizamHoje extends javax.swing.JDialog {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setText("Reserva Selecionada:");
+
+        jLabelReserva.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -107,16 +112,14 @@ public class JDReservasFinalizamHoje extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(358, 358, 358)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButtonFinalizar)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(358, 358, 358)
-                                .addComponent(jButtonFinalizar))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(323, 323, 323)
                                 .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(27, 27, 27)
                                 .addComponent(jLabelReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 368, Short.MAX_VALUE)))
+                        .addGap(0, 296, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -124,7 +127,7 @@ public class JDReservasFinalizamHoje extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabelReserva, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))

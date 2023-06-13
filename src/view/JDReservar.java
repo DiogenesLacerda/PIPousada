@@ -195,6 +195,7 @@ public class JDReservar extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        jButtonCancelar.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jButtonCancelar.setText("CANCELAR");
         jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -202,6 +203,7 @@ public class JDReservar extends javax.swing.JDialog {
             }
         });
 
+        jButtonReservar.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jButtonReservar.setText("RESERVAR");
         jButtonReservar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,6 +211,7 @@ public class JDReservar extends javax.swing.JDialog {
             }
         });
 
+        jButtonNova.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jButtonNova.setText("NOVA");
         jButtonNova.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -216,6 +219,7 @@ public class JDReservar extends javax.swing.JDialog {
             }
         });
 
+        jTableLista.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jTableLista.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -242,10 +246,15 @@ public class JDReservar extends javax.swing.JDialog {
         });
         jScrollPane1.setViewportView(jTableLista);
 
+        jLabel1.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel1.setText("Reserva número:");
 
+        jLabelreserva.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+
+        jLabel3.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         jLabel3.setText("Quartos ");
 
+        jLabel13.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel13.setText("Total da reserva:");
 
         try {
@@ -254,18 +263,23 @@ public class JDReservar extends javax.swing.JDialog {
             ex.printStackTrace();
         }
 
+        jLabel14.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel14.setText("Forma PAG:");
 
+        jLabel16.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel16.setText("OBS:");
 
         jTextAreaOBSV.setColumns(20);
         jTextAreaOBSV.setRows(5);
         jScrollPane3.setViewportView(jTextAreaOBSV);
 
+        jLabel17.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel17.setText("Entrada:");
 
+        jLabel18.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel18.setText("Quarto Nº:");
 
+        jLabel20.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel20.setText("Saída:");
 
         try {
@@ -274,12 +288,16 @@ public class JDReservar extends javax.swing.JDialog {
             ex.printStackTrace();
         }
 
-        jLabel15.setText("Digite o CPF do Cliente:");
+        jLabel15.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+        jLabel15.setText("CPF do Cliente:");
 
+        jLabel19.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel19.setText("Nome:");
 
+        jLabel21.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel21.setText("CPF:");
 
+        jLabel22.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel22.setText("RG:");
 
         jTableFpag.setModel(new javax.swing.table.DefaultTableModel(
@@ -300,6 +318,7 @@ public class JDReservar extends javax.swing.JDialog {
         });
         jScrollPane5.setViewportView(jTableFpag);
 
+        jButtonCalcular.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jButtonCalcular.setText("CALCULAR");
         jButtonCalcular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -307,6 +326,7 @@ public class JDReservar extends javax.swing.JDialog {
             }
         });
 
+        jButtonPesquisar.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jButtonPesquisar.setText("OK");
         jButtonPesquisar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -319,16 +339,27 @@ public class JDReservar extends javax.swing.JDialog {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        jFormattedTextFieldCPF.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jFormattedTextFieldCPF.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jFormattedTextFieldCPFKeyPressed(evt);
             }
         });
 
+        jLabelCPF.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+
+        jLabelRG.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+
+        jLabelNome.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+
         jLabelTotal.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
 
+        jLabel23.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel23.setText("Valor:");
 
+        jLabelValor.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+
+        jLabel2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel2.setText("Diárias:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -352,7 +383,8 @@ public class JDReservar extends javax.swing.JDialog {
                                     .addComponent(jLabel17)
                                     .addComponent(jLabel20)
                                     .addComponent(jLabel13)
-                                    .addComponent(jLabel14))
+                                    .addComponent(jLabel14)
+                                    .addComponent(jLabel16))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jFormattedTextFieldDataEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -366,43 +398,37 @@ public class JDReservar extends javax.swing.JDialog {
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabel2)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabelDia, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addComponent(jLabelDia, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(86, 86, 86))
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel19)
+                            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel21, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(jLabel18)
+                            .addComponent(jLabel1))
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(15, 15, 15)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel19)
-                                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jLabel22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel21, javax.swing.GroupLayout.Alignment.TRAILING))
-                                    .addComponent(jLabel18)
-                                    .addComponent(jLabel1))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jFormattedTextFieldCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButtonPesquisar))
-                                    .addComponent(jLabelreserva, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabelCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabelNome, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabelQuarto, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(24, 24, 24)
-                                                .addComponent(jLabel23))
-                                            .addComponent(jLabelRG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jLabelValor, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(jFormattedTextFieldCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonPesquisar))
+                            .addComponent(jLabelreserva, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelNome, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(115, 115, 115)
-                                .addComponent(jLabel16)
-                                .addGap(18, 18, 18)
-                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabelQuarto, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(24, 24, 24)
+                                        .addComponent(jLabel23))
+                                    .addComponent(jLabelRG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabelValor, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(163, 163, 163)))
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -417,7 +443,7 @@ public class JDReservar extends javax.swing.JDialog {
                 .addGap(14, 14, 14)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 503, Short.MAX_VALUE)
+                .addComponent(jScrollPane1)
                 .addGap(15, 15, 15))
             .addGroup(layout.createSequentialGroup()
                 .addGap(52, 52, 52)
@@ -500,6 +526,10 @@ public class JDReservar extends javax.swing.JDialog {
             cod = cliente.getId();
             jButtonPesquisar.setEnabled(false);
             jFormattedTextFieldCPF.setEnabled(false);
+            }else if(jFormattedTextFieldCPF.getText().length() < 11){
+             jFormattedTextFieldCPF.setText("");
+            JOptionPane.showMessageDialog(null, "Cliente não cadastrado");
+            jFormattedTextFieldCPF.requestFocus(); 
             }else{
                 jFormattedTextFieldCPF.setText("");
                JOptionPane.showMessageDialog(null, "Cliente não cadastrado");
@@ -525,11 +555,14 @@ public class JDReservar extends javax.swing.JDialog {
             cod = cliente.getId();
             jButtonPesquisar.setEnabled(false);
             jFormattedTextFieldCPF.setEnabled(false);
+            }else if(jFormattedTextFieldCPF.getText().length() < 11){
+             jFormattedTextFieldCPF.setText("");
+            JOptionPane.showMessageDialog(null, "Cliente não cadastrado");
+            jFormattedTextFieldCPF.requestFocus(); 
             }else{
             jFormattedTextFieldCPF.setText("");
             JOptionPane.showMessageDialog(null, "Cliente não cadastrado");
-            jFormattedTextFieldCPF.requestFocus();
-              
+            jFormattedTextFieldCPF.requestFocus(); 
             }
         }catch(Exception ex){
             jFormattedTextFieldCPF.setText("");

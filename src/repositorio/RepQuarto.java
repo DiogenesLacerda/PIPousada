@@ -92,7 +92,7 @@ public class RepQuarto{
       List<Quarto> quartos = new ArrayList<>();
       
       String sql = "select distinct q.* from quarto q, reserva r where q.id = r.quarto_id and "
-              + "r.data_entrada > CURRENT_DATE and r.status = 'Reservada' and q.reservado = 0 and q.status = 1";
+              + "r.data_entrada > CURRENT_DATE and r.status = 'Reservada' and q.status = 1";
       
       try{
           Statement stmt = con.createStatement();
@@ -195,11 +195,11 @@ public class RepQuarto{
       
        if(tipoPesquisa.equals("tipo")){
        sql = "select distinct q.* from quarto q, reserva r where q.id = r.quarto_id and "
-              + "r.data_entrada > CURRENT_DATE and q.reservado = 0 and r.status = 'Reservada' and q.status = 1 "
+              + "r.data_entrada > CURRENT_DATE and r.status = 'Reservada' and q.status = 1 "
                + "and tipo like '%"+valor+"%'";
       }else if(tipoPesquisa.equals("numero")){
        sql = "select distinct q.* from quarto q, reserva r where q.id = r.quarto_id and "
-              + "r.data_entrada > CURRENT_DATE and q.reservado = 0 and r.status = 'Reservada' and q.status = 1 "
+              + "r.data_entrada > CURRENT_DATE and r.status = 'Reservada' and q.status = 1 "
                + "and num_quarto = '"+valor+"'";
       }
       

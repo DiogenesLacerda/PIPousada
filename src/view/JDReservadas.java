@@ -148,7 +148,7 @@ public class JDReservadas extends javax.swing.JDialog {
                 {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Nº", "ENTRADA", "SAÍDA", "CLIENTE", "CPF CLIENTE", "QUARTO", "TOTAL", "FORMA PAG", "OBS", "RESERVADA"
+                "Nº:", "ENTRADA:", "SAÍDA:", "CLIENTE:", "CPF CLIENTE:", "QUARTO:", "TOTAL:", "FORMA PAG:", "OBS:", "RESERVADA:"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -166,6 +166,7 @@ public class JDReservadas extends javax.swing.JDialog {
         });
         jScrollPane2.setViewportView(jTableLista);
 
+        jButtonCancelarReser.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jButtonCancelarReser.setText("CANCELAR RESERVA");
         jButtonCancelarReser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,6 +174,7 @@ public class JDReservadas extends javax.swing.JDialog {
             }
         });
 
+        jButtonAlterar.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jButtonAlterar.setText("ALTERAR RESERVA");
         jButtonAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,6 +182,7 @@ public class JDReservadas extends javax.swing.JDialog {
             }
         });
 
+        jButtonSalvar.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jButtonSalvar.setText("SALVAR");
         jButtonSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,6 +190,7 @@ public class JDReservadas extends javax.swing.JDialog {
             }
         });
 
+        jButtonCancelar.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jButtonCancelar.setText("CANCELAR");
         jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,9 +199,11 @@ public class JDReservadas extends javax.swing.JDialog {
         });
 
         buttonGroup1.add(jRadioButtonCliente);
+        jRadioButtonCliente.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButtonCliente.setText("Cliente");
 
         buttonGroup1.add(jRadioButtonQuarto);
+        jRadioButtonQuarto.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButtonQuarto.setText("Quarto");
 
         jTextFieldPesquisa.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -206,11 +212,13 @@ public class JDReservadas extends javax.swing.JDialog {
             }
         });
 
+        jLabel10.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel10.setText("Pesquisar:");
 
         jLabel11.setText("CPF:");
 
         buttonGroup1.add(jRadioButtonNumero);
+        jRadioButtonNumero.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButtonNumero.setText("Número da Reserva");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -277,8 +285,8 @@ public class JDReservadas extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jRadioButtonNumero)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jTextFieldPesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26))))
         );
@@ -323,7 +331,7 @@ public class JDReservadas extends javax.swing.JDialog {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(37, Short.MAX_VALUE)
+                .addContainerGap(35, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButtonCliente)
                     .addComponent(jRadioButtonQuarto)

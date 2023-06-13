@@ -109,20 +109,35 @@ public class JDQuartos extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel1.setText("Código:");
 
+        jTextFieldCodigo.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+
+        jLabel2.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel2.setText("Número:");
 
+        jTextFieldNumero.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+
+        jLabel3.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel3.setText("Tipo:");
 
+        jTextFieldTipo.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+
+        jLabel4.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel4.setText("Descrição:");
 
         jTextAreaDescricao.setColumns(20);
+        jTextAreaDescricao.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jTextAreaDescricao.setRows(5);
         jScrollPane1.setViewportView(jTextAreaDescricao);
 
+        jLabel5.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel5.setText("Valor:");
 
+        jTextFieldValor.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
+
+        jTableLista.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jTableLista.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -149,6 +164,7 @@ public class JDQuartos extends javax.swing.JDialog {
         });
         jScrollPane2.setViewportView(jTableLista);
 
+        jButtonCancelar.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jButtonCancelar.setText("CANCELAR");
         jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,6 +172,7 @@ public class JDQuartos extends javax.swing.JDialog {
             }
         });
 
+        jButtonAlterar.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jButtonAlterar.setText("ALTERAR");
         jButtonAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,6 +180,7 @@ public class JDQuartos extends javax.swing.JDialog {
             }
         });
 
+        jButtonSalvar.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jButtonSalvar.setText("SALVAR");
         jButtonSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -170,6 +188,7 @@ public class JDQuartos extends javax.swing.JDialog {
             }
         });
 
+        jButtonNovo.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jButtonNovo.setText("NOVO");
         jButtonNovo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -177,6 +196,7 @@ public class JDQuartos extends javax.swing.JDialog {
             }
         });
 
+        jButtonExcluir.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jButtonExcluir.setText("EXCLUIR");
         jButtonExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,17 +205,21 @@ public class JDQuartos extends javax.swing.JDialog {
         });
 
         buttonGroup1.add(jRadioButtonTipo);
+        jRadioButtonTipo.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButtonTipo.setText("Tipo");
 
         buttonGroup1.add(jRadioButtonNumero);
+        jRadioButtonNumero.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jRadioButtonNumero.setText("Número");
 
+        jTextFieldPesquisa.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jTextFieldPesquisa.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jTextFieldPesquisaKeyPressed(evt);
             }
         });
 
+        jLabel6.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
         jLabel6.setText("Pesquisar:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -226,8 +250,8 @@ public class JDQuartos extends javax.swing.JDialog {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jRadioButtonNumero)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
+                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jTextFieldPesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 622, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
@@ -241,7 +265,7 @@ public class JDQuartos extends javax.swing.JDialog {
                         .addComponent(jButtonSalvar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonNovo)))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -254,7 +278,7 @@ public class JDQuartos extends javax.swing.JDialog {
                     .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 498, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addContainerGap(69, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
