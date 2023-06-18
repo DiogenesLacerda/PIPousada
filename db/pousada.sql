@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 03-Jun-2023 às 00:44
--- Versão do servidor: 10.4.24-MariaDB
--- versão do PHP: 7.4.29
+-- Tempo de geração: 18/06/2023 às 16:30
+-- Versão do servidor: 10.4.28-MariaDB
+-- Versão do PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `cliente`
+-- Estrutura para tabela `cliente`
 --
 
 CREATE TABLE `cliente` (
@@ -36,34 +36,31 @@ CREATE TABLE `cliente` (
   `sexo` varchar(1) NOT NULL,
   `telefone` varchar(20) DEFAULT NULL,
   `status` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `cliente`
+-- Despejando dados para a tabela `cliente`
 --
 
 INSERT INTO `cliente` (`id`, `nome`, `cpf`, `rg`, `data_nacimento`, `sexo`, `telefone`, `status`) VALUES
 (1, 'Marcos Everaldo', '123.456.789-09', '15645644', '2001-08-15', 'M', '5645645677', 1),
-(2, 'Lucas', '987.654.321-00', '5674654', '1993-12-25', 'M', '564644054', 1),
-(3, 'Paulo Almeida', '456.123.475-62', '1234516', '2000-12-10', 'M', '81933442502', 0),
-(4, 'Vitoria', '235.684.752-12', '3020154', '1988-09-15', 'F', '6543-0021', 1),
-(5, 'Kabuto', '547.896.520-03', '1200365', '2005-02-01', 'M', '3628-8899', 1),
-(6, 'Marcio', '023.224.558-95', '0367812', '1955-09-21', 'M', '0214-6521', 1),
-(7, 'Emerson', '023.654.559-89', '5200123', '1940-09-06', 'M', '8569-1598', 1);
+(2, 'Lucas', '987.654.321-00', '5674654', '1993-05-03', 'M', '564644054', 1),
+(3, 'Paulo Almeida', '456.123.475-62', '1234516', '2000-12-10', 'M', '81933442502', 1),
+(4, 'Alberto Jose', '987.654.321-01', '1234567', '2000-06-15', 'M', '99999-9999', 1);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `fpag`
+-- Estrutura para tabela `fpag`
 --
 
 CREATE TABLE `fpag` (
   `id` int(11) NOT NULL,
   `descricao` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `fpag`
+-- Despejando dados para a tabela `fpag`
 --
 
 INSERT INTO `fpag` (`id`, `descricao`) VALUES
@@ -74,7 +71,7 @@ INSERT INTO `fpag` (`id`, `descricao`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `funcionario`
+-- Estrutura para tabela `funcionario`
 --
 
 CREATE TABLE `funcionario` (
@@ -89,53 +86,49 @@ CREATE TABLE `funcionario` (
   `bairro` varchar(200) NOT NULL,
   `telefone` varchar(15) NOT NULL,
   `senha` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `funcionario`
+-- Despejando dados para a tabela `funcionario`
 --
 
 INSERT INTO `funcionario` (`id`, `nome`, `cpf`, `rg`, `data_nacimento`, `sexo`, `rua`, `numero`, `bairro`, `telefone`, `senha`) VALUES
-(5, 'Amanda', '123.456.789-09', '464655556', '1990-02-01', 'F', 'Rua da Gaia', '564', 'Joao Enersto', '8512-8965', '202cb962ac59075b964b07152d234b70'),
-(8, 'João', '562.341.789-56', '1546987', '1985-05-12', 'M', 'Rua Dra Maria', '87', 'Caipirinha', '8565-1235', 'c20ad4d76fe97759aa27a0c99bff6710'),
-(9, 'Pedro', '542.136.958-75', '3965874', '2000-01-23', 'M', 'Rua Santo Antonio', '2', 'Boa Vista', '5568-7458', '202cb962ac59075b964b07152d234b70');
+(3, 'jose', '123.456.789-09', '156456', '1991-02-01', 'F', 'sdgsdg', '154564', 'srghwgh', '454654', 'd41d8cd98f00b204e9800998ecf8427e'),
+(5, 'Amanda', '123.456.789-09', '464655556', '1990-02-01', 'M', 'werghwhg', 'wrehe', 'qwehe', 'erh', 'e10adc3949ba59abbe56e057f20f883e'),
+(7, 'Joao', '987.654.321-00', '45648423', '1985-10-25', 'M', 'Rua da Alegria', '55', 'Centro', '996334428', '81dc9bdb52d04dc20036dbd8313ed055');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `quarto`
+-- Estrutura para tabela `quarto`
 --
 
 CREATE TABLE `quarto` (
   `id` int(11) NOT NULL,
   `num_quarto` varchar(6) NOT NULL,
-  `tipo` varchar(50) NOT NULL,
+  `tipo` varchar(15) NOT NULL,
   `descricao` varchar(800) NOT NULL,
-  `valor` double(10,2) NOT NULL,
+  `valor` double(5,2) NOT NULL,
   `status` int(11) NOT NULL,
   `reservado` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `quarto`
+-- Despejando dados para a tabela `quarto`
 --
 
 INSERT INTO `quarto` (`id`, `num_quarto`, `tipo`, `descricao`, `valor`, `status`, `reservado`) VALUES
-(1, '1', 'Duplo Casal', 'Cama de casal, Ar Condicionado,\nFrigobar,Tv 65\',Internet,Vista Pra Praia', 250.00, 1, 0),
-(2, '2', 'Duplo Solteiro', 'Duas Camas Solteiro, Ar Condicionado,\nFrigobar,Tv 65\',Internet', 195.00, 1, 0),
-(3, '3', 'Duplo Casal', 'Cama de casal, Ar Condicionado,\nFrigobar,Tv 65\',Internet,Vista Pra Praia', 250.00, 1, 0),
-(4, '4', 'Triplo Casal', 'Cama de casal, Cama Solteiro\nAr Condicionado\nFrigobar,Tv 65\',Internet', 300.00, 1, 0),
-(5, '5', 'Triplo Solteiro', 'Três Camas Solteiro, Ar Condicionado\nFrigobar,Tv 65\',Internet,Vista Pra Praia', 280.00, 1, 0),
-(6, '6', 'Suíte P', 'Cama King Size, Espelho no Teto,\nHidroMassagem, TV 70\', Alexa,\nGeladeira FrossFree, Vista Para Praia', 900.00, 1, 1),
-(7, '7', 'Single', 'Cama Solteiro,Frigobar,TV 45\',Banheira,\nPole Dance,Vista Para Praia', 230.00, 1, 0),
-(8, '8', 'Single', 'Cama Solteiro,Frigobar,TV 45\',Banheira,\nPole Dance,Vista Para Praia', 230.00, 1, 0),
-(9, '9', 'Triplo Casal', 'Cama de casal, Cama Solteiro\nAr Condicionado\nFrigobar,Tv 65\',Internet', 300.00, 1, 0),
-(10, '10', 'Duplo Solteiro', 'Duas Camas Solteiro, Ar Condicionado,\nFrigobar,Tv 65\',Internet', 195.00, 1, 0);
+(1, '1', 'Duplo Casal', 'Cama de casal, televisão, frigobar.', 135.00, 1, 0),
+(2, '2', 'Duplo Solteiro', '2 camas de solteiro, televisão,\nfrigobar.\n.', 135.00, 1, 0),
+(3, '3', 'Duplo Casal', 'Cama casal, frigobar,\n ar condicionado, televisao', 150.00, 1, 1),
+(4, '4', 'Triplo Casal', '1 Cama de solteiro e  1 cama\nde casal, televisao, ar condicionado', 175.00, 1, 0),
+(5, '5', 'Triplo Solteiro', '3 camas de solteir, frigobar\nar condicionado, televisao', 190.00, 1, 0),
+(6, '6', 'Single', '1 cama de solteiro, frigobar, ar condicionado', 125.00, 1, 0);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `reserva`
+-- Estrutura para tabela `reserva`
 --
 
 CREATE TABLE `reserva` (
@@ -149,10 +142,10 @@ CREATE TABLE `reserva` (
   `valor` double(10,2) NOT NULL,
   `observacoes` varchar(800) DEFAULT NULL,
   `status` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `reserva`
+-- Despejando dados para a tabela `reserva`
 --
 
 INSERT INTO `reserva` (`id`, `data_entrada`, `data_saida`, `data_reserva`, `cliente_id`, `quarto_id`, `fpag_id`, `valor`, `observacoes`, `status`) VALUES
@@ -170,39 +163,41 @@ INSERT INTO `reserva` (`id`, `data_entrada`, `data_saida`, `data_reserva`, `clie
 (26, '2023-05-26', '2023-05-30', '2023-05-27', 1, 2, 3, 540.00, 'segsg', 'Finalizada'),
 (27, '2023-05-11', '2023-05-12', '2023-05-28', 1, 4, 2, 175.00, '', 'Finalizada'),
 (28, '2024-01-01', '2024-01-02', '2023-05-28', 1, 5, 1, 190.00, '', 'Cancelada'),
-(29, '2023-05-31', '2029-12-05', '2023-05-31', 1, 6, 1, 2142000.00, 'Ta achando que eu to liso é', 'Reservada'),
-(30, '2023-11-12', '2023-12-10', '2023-05-31', 1, 7, 1, 6440.00, 'uhoho', 'Cancelada');
+(29, '2023-05-30', '2023-06-18', '2023-05-28', 1, 3, 2, 2850.00, 'Tá caro demais', 'Reservada'),
+(30, '2023-11-30', '2023-12-30', '2023-05-29', 1, 5, 1, 5700.00, '', 'Reservada'),
+(31, '2023-11-26', '2023-11-30', '2023-06-13', 1, 3, 3, 600.00, 'dfbdfb', 'Reservada'),
+(32, '2023-07-25', '2023-07-30', '2023-06-18', 1, 5, 3, 950.00, 'Pago', 'Reservada');
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `cliente`
+-- Índices de tabela `cliente`
 --
 ALTER TABLE `cliente`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `fpag`
+-- Índices de tabela `fpag`
 --
 ALTER TABLE `fpag`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `funcionario`
+-- Índices de tabela `funcionario`
 --
 ALTER TABLE `funcionario`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `quarto`
+-- Índices de tabela `quarto`
 --
 ALTER TABLE `quarto`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `reserva`
+-- Índices de tabela `reserva`
 --
 ALTER TABLE `reserva`
   ADD PRIMARY KEY (`id`),
@@ -211,14 +206,14 @@ ALTER TABLE `reserva`
   ADD KEY `quarto_id` (`quarto_id`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
 -- AUTO_INCREMENT de tabela `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `fpag`
@@ -230,26 +225,26 @@ ALTER TABLE `fpag`
 -- AUTO_INCREMENT de tabela `funcionario`
 --
 ALTER TABLE `funcionario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de tabela `quarto`
 --
 ALTER TABLE `quarto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `reserva`
 --
 ALTER TABLE `reserva`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
--- Restrições para despejos de tabelas
+-- Restrições para tabelas despejadas
 --
 
 --
--- Limitadores para a tabela `reserva`
+-- Restrições para tabelas `reserva`
 --
 ALTER TABLE `reserva`
   ADD CONSTRAINT `reserva_ibfk_1` FOREIGN KEY (`cliente_id`) REFERENCES `cliente` (`id`),
